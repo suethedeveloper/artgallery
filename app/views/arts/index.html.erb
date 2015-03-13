@@ -1,3 +1,4 @@
 <% @arts.each do |art| %>
+<%= link_to (image_tag art.image.url(:medium)), art %>
   <h2> <%= link_to "#{art.title}", art_path(art) %></h2>
 <% end %>

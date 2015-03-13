@@ -39,7 +39,7 @@ class ArtsController < ApplicationController
 
   private
   def art_params
-    params.require(:art).permit(:title, :description)
+    params.require(:art).permit(:title, :description, :image)
   end
 
   def find_art
