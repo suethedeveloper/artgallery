@@ -1,5 +1,3 @@
 <% @arts.each do |art| %>
   <h2> <%= link_to "#{art.title}", art_path(art) %></h2>
 <% end %>
-
-<%= link_to "new", new_art_path %>
