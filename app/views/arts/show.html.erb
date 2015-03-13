@@ -1,6 +1,8 @@
 <h1><%= @art.title %></h1>
 <%= @art.description %>
 <br><br>
+Submitted by <%= @art.user.email %>
+<br><br>
 <%= link_to "Back", root_path %>
 <%= link_to "Edit", edit_art_path(@art) %>
 <%= link_to "Delete", art_path(@art), method: "delete", data: {confirm: "Are you sure?"} %>

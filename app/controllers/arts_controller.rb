@@ -5,11 +5,11 @@ class ArtsController < ApplicationController
   end
 
   def new
-    @art = Art.new
+    @art = current_user.arts.build
   end
 
   def create
-    @art = Art.create art_params
+    @art = current_user.arts.build art_params
     if @art.save
       redirect_to arts_path @art, notice: "successfully create new Art"
     else
