@@ -1,0 +1,24 @@
+<%= simple_form_for @art, html: {multipart: true} do |f| %>
+  
+  <% if @art.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@art.errors.count, "error") %> prevented this Art from being saved:</h2>
+      <ul>
+      <% @art.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-group">
+<%= f.input :title, required: true, autofocus: true, input_html: { :class => "form-control" } %>
+</div>
+<div class="form-group">
+<%= f.input :description, input_html: { class: "form-control" } %>
+</div>
+<div class="form-group">
+<%= f.submit class:"btn btn-primary" %>
+</div>
+
+<% end %>
