@@ -1,4 +1,11 @@
-<% @arts.each do |art| %>
-<%= link_to (image_tag art.image.url(:medium)), art %>
-  <h2> <%= link_to "#{art.title}", art_path(art) %></h2>
-<% end %>
+<div id="arts" class="transitions-enabled">
+  <% @arts.each do |art| %>
+  <div class="box panel panel-default">
+    <%= link_to (image_tag art.image.url), art %>
+      <div class="panel-body">
+        <h2> <%= link_to "#{art.title}", art %></h2>
+        <p class="user">Submitted by <%= art.user.email %></p>
+      </div>
+  </div>
+  <% end %>
+</div>

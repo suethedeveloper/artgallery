@@ -1,9 +1,32 @@
-<%= image_tag @art.image.url(:medium) %>
-<h1><%= @art.title %></h1>
-<%= @art.description %>
-<br><br>
-Submitted by <%= @art.user.email %>
-<br><br>
-<%= link_to "Back", root_path %>
-<%= link_to "Edit", edit_art_path(@art) %>
-<%= link_to "Delete", art_path(@art), method: "delete", data: {confirm: "Are you sure?"} %>
+
+<div id="art_show" class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-default">
+      <div class="panel-heading art_image">
+        <%= image_tag @art.image.url %>
+      </div>
+      <div class="panel-body">
+        <h1><%= @art.title %></h1>
+        <p class="description"><%= @art.description %></p>
+        <p>Submitted by <%= @art.user.email %></p>
+      </div> <!-- end of panel body -->
+      <div class="panel-footer">
+        <div class="row">
+          <div class="col-md-6">
+            <p class="user">Submitted by <%= @art.user.email %></p>
+          </div>
+          <div class="col-md-6">
+            <div class="btn-group pull-right">
+              <%= link_to "Edit", edit_art_path(@art), class: "btn btn-default" %>
+              <%= link_to "Delete", art_path(@art), method: "delete", data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+            </div>
+          </div> <!-- end of row -->
+        </div>
+      </div> <!-- end of panel footer -->
+    </div> <!-- end of panel-default -->
+  </div>
+</div>  
+
+
+
+

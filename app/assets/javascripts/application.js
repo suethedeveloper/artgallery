@@ -12,6 +12,15 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require masonry/jquery.masonry
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+
+  //  $('#arts').imagesLoaded(function(){
+  //   $('#arts').masonry({
+  //     itemSelector: '.box',
+  //     isFitWidth: true
+  //   });
+  // });
