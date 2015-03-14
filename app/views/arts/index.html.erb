@@ -1,9 +1,24 @@
+<div class="box panel panel-default">
+  <div class="panel-heading">신계자 (Shin, Gyeja)</div>
+  <div class="panel-body">
+    <p>홍익대학교 미술대학 동양화과 졸업</p>
+    <p>원광대 동서보완대체의학 대학원 예술치료학 석사수료</p>
+    <br>
+    <p><strong>전시</strong></p>
+    <p>2014 1회개인전-달그림자, 갤러리이즈, 서울</p>
+    <p>200-2014 홍익여성 한국화회전, 인사아트센터, 서울</p>
+    <p>2000 용전, 덕원갤러리, 서울</p>
+    <p>1999 건널목전, 삼정갤러리, 서울</p>
+  </div>
+</div>
 <div id="arts" class="transitions-enabled">
   <% @arts.each do |art| %>
   <div class="box panel panel-default">
     <%= link_to (image_tag art.image.url), art %>
       <div class="panel-body">
         <h2> <%= link_to "#{art.title}", art %></h2>
+      <!-- </div>
+      <div class="panel-footer"> -->
         <p class="user">Submitted by <%= art.user.email %></p>
       </div>
   </div>

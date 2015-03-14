@@ -1,5 +1,5 @@
 class ArtsController < ApplicationController
-  before_action :find_art, only: [:show, :edit, :update, :destroy]
+  before_action :find_art, only: [:show, :edit, :update, :destroy, :upvote]
   def index
     @arts = Art.all.order("created_at DESC")
   end
@@ -37,7 +37,13 @@ class ArtsController < ApplicationController
     redirect_to root_path
   end
 
+  def upvote
+    @art.upvote_by current_user
+    redirect_to :back
+  end
+
   private
+
   def art_params
     params.require(:art).permit(:title, :description, :image)
   end
