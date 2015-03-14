@@ -1,8 +1,16 @@
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
-    <h1>Edit Art</h1>
-    <%= image_tag @art.image.url(:medium) %>
-    <%= render 'form' %>
-    <%= link_to "Cancel", @pin %>
-  </div>
-</div>
+<div class="col-md-6 col-md-offset-3">
+  <div class="row">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h1>Edit Art Information</h1>
+      </div>
+      <div class="panel-body">
+        <strong class="center">Current Image</strong>
+        <br>
+        <%= image_tag @art.image.url(:medium) %>
+        <br><br>
+        <%= render 'form' %>
+      </div> <!-- panel-body -->
+    </div> <!-- panel-default -->
+  </div> <!-- row -->
+</div> <!-- col-md-6 -->

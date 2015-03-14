@@ -19,9 +19,11 @@
               <%= link_to like_art_path(@art), method: :put,class: "btn btn-default" do %>
                 <span class="glyphicon glyphicon-heart"> <%= @art.get_upvotes.size %></span>
               <% end %>
-              <% if current_user.email == @art.user.email %>
+              <% if user_signed_in? %>
+                <% if current_user.email == @art.user.email %>
               <%= link_to "Edit", edit_art_path(@art), class: "btn btn-default" %>
               <%= link_to "Delete", art_path(@art), method: "delete", data: {confirm: "Are you sure?"}, class: "btn btn-default" %>
+                <% end %>
               <% end %>
             </div>
           </div> <!-- end of row -->

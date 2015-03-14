@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Art Gallery</title>
+  <title>신계자's Art Gallery</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -9,7 +9,7 @@
 <body>
 <nav class="nav navbar navbar-default">
   <div class="container">
-    <%= link_to "Art Gallery", root_path, class: "navbar-brand" %>
+    <%= link_to "신계자 (Shin, Gyeja)'s Art Gallery", root_path, class: "navbar-brand" %>
     <% if user_signed_in? %> 
     <ul class="nav navbar-nav navbar-right">
       <li><%= link_to "New Art", new_art_path %></li>
