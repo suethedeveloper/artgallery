@@ -5,8 +5,6 @@
 #   gem 'sqlite3'
 #
 default: &default
-  # adapter: postgresql
-  # encoding: unicode
   adapter: sqlite3
   pool: 5
   timeout: 5000
@@ -25,3 +23,11 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+production:  
+  adapter: postgresql
+  encoding: unicode
+  database: artgallery_production
+  pool: 5
+  username: artgallery
+  password: <%= ENV["ARTGALLERY_DATABASE_PASSWORD"] %>
