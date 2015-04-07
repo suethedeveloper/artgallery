@@ -13,8 +13,9 @@
 </div>
 <div id="arts" class="transitions-enabled">
   <% @arts.each do |art| %>
-  <div class="box panel panel-default">
-    <%= link_to (image_tag art.image.url), art %>
+  <div class="box panel panel-default art_size">
+    <%= link_to (image_tag art.image_file_name), art %>
+    <!-- http://i.imgur.com/Yz2VNL0.jpg -->
       <div class="panel-body">
         <h2> <%= link_to "#{art.title}", art %></h2>
       <!-- </div>

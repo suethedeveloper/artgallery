@@ -7,7 +7,7 @@
       <div class="panel-body">
         <strong class="center">Current Image</strong>
         <br>
-        <%= image_tag @art.image.url(:medium) %>
+        <%= image_tag @art.image_file_name %>
         <br><br>
         <%= render 'form' %>
       </div> <!-- panel-body -->
