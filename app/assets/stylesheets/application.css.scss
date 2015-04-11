@@ -18,6 +18,20 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
+/*@media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) { */
+    /* Retina-specific stuff here */
+/*}*/
+/*@media only screen and (-webkit-min-device-pixel-ratio: N),
+  only screen and (min-resolution: Ndppx), /* Default way */
+  /*only screen and (min-resolution: YYYdpi)*/ /* fallback *//* {}*/
+
 body {
   background: #E9E9E9;
 }
@@ -114,4 +128,8 @@ nav {
 
 textarea {
   min-height: 250px;
+}
+
+html.uploadcare-dialog-opened {
+  overflow: inherit;
 }

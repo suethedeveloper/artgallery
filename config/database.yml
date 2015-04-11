@@ -78,8 +78,19 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: blog_production
-  username: blog
-  password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+# production:
+#   <<: *default
+# <<<<<<< HEAD
+#   database: blog_production
+#   username: blog
+#   password: <%= ENV['BLOG_DATABASE_PASSWORD'] %>
+# =======
+#   database: db/production.sqlite3
+
+production:  
+  adapter: postgresql
+  encoding: unicode
+  database: artgallery_production
+  pool: 5
+  username: artgallery
+  password: <%= ENV["ARTGALLERY_DATABASE_PASSWORD"] %>

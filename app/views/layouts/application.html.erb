@@ -5,6 +5,30 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+<script charset="utf-8" src="//ucarecdn.com/widget/2.0.5/uploadcare/uploadcare.full.min.js"></script>
+<script>
+  UPLOADCARE_LOCALE = "en";
+  UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr skydrive";
+  UPLOADCARE_PUBLIC_KEY = "35aab9d85173927d04b4";
+
+
+  // uploadcare.openDialog(null, {
+  //   crop: "disabled",
+  //   previewStep: true
+  // }).done(function(file) {
+  //   file.promise().done(function(fileInfo){
+  //     console.log(fileInfo.cdnUrl);
+  //   });
+  // });
+    
+
+  uploadcare.openDialog(null, {
+      publicKey: "35aab9d85173927d04b4",
+      imagesOnly: true
+      // crop: "300x200",
+  });  
+</script>
+
 </head>
 <body>
 <nav class="nav navbar navbar-default">
